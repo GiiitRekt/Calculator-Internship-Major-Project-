@@ -1,0 +1,75 @@
+/* Basic styling for the body to center the calculator */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the calculator with rounded corners and padding */
+.calculator-container {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 320px;
+    padding: 20px; /* Padding around the entire container */
+}
+
+/* Styling for the display area */
+.display {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; /* Space between display and buttons */
+}
+
+/* Styling for the textareas in the display area */
+textarea {
+    width: calc(100% - 20px); 
+    height: 60px;
+    margin-bottom: 10px;
+    padding: 10px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: right;
+    color: #ffffff;
+    background-color: #333333;
+}
+
+/* Grid layout for calculator buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+/* Styling for individual buttons */
+button {
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #555555;
+}
+
+/* Active effect for buttons */
+button:active {
+    background-color: #777777;
+}
+
+/* Special styling for the zero button to span two columns */
+button.zero {
+    grid-column: span 2;
+}
